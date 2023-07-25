@@ -15,6 +15,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <!-- <script type="module" src="/app.js"></script> -->
     <title>{title}</title>
   </head>
   <body class="bg-dark-blue text-white overflow-none">
@@ -36,5 +37,12 @@ const { title } = Astro.props;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  .hide {
+    opacity: 0;
+    transition: all 2s;
+  }
+  .show {
+    opacity: 1;
   }
 </style>

@@ -1,34 +1,79 @@
 ---
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: 'CryptoCrunch',
+    description:
+      'A website which shows details about cryptocurrency prices and thier details. ',
+    // github: 'https://github.com/sanket-16/CrunchCap',
+    demo: 'https://cryptocrunch.vercel.app',
+    image: '/cryptocrunch.png',
+  },
+  {
+    title: 'CryptoCrunch',
+    description: 'hi',
+    github: 'https://github.com/sanket-16/CrunchCap',
+    demo: 'https://cryptocrunch.vercel.app',
+    image: '/cryptocrunch.png',
+  },
+  {
+    title: 'CryptoCrunch',
+    description: 'hi',
+    github: 'https://github.com/sanket-16/CrunchCap',
+    demo: 'https://cryptocrunch.vercel.app',
+    image: '/cryptocrunch.png',
+  },
+];
+const skills = [];
 ---
 
+<script src="/app.js" defer></script>
 <Layout title="Sanket's Portfolio">
-  <main
-    class="h-[100vh] flex flex-row justify-end items-center bg-[url('/hero.svg')] bg-60% bg-no-repeat bg-left-bottom pr-20"
+  <section
+    class="hide h-[100vh] bg-[url('/hero.svg')] md:bg-60% bg-90% bg-no-repeat bg-left-bottom"
   >
-    <p class="font-bold flex flex-col">
-      <span class="text-8xl"> Hi , I'm Sanket.</span>
-      <span class="text-6xl"
-        >Just a <span class="text-mint-green">wannabe</span></span
-      >
-      <span class="text-6xl">Full Stack Dev.</span>
-    </p>
-  </main>
+    <div class="flex flex-row justify-end items-center pr-20 h-full">
+      <p class="font-bold flex flex-col md:m-0 ml-20">
+        <span class="md:text-8xl text-6xl"> Hi , I'm Sanket.</span>
+        <span class="md:text-6xl text-4xl"
+          >Just a <span class="text-mint-green">wannabe</span></span
+        >
+        <span class="md:text-6xl text-4xl">Full Stack Dev.</span>
+      </p>
+    </div>
+  </section>
+  <section class="hide h-[100vh]">
+    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
+      <h1 class="text-6xl font-bold">Skills</h1>
+      <div class="mx-10">Skill</div>
+    </div>
+  </section>
+  <!-- Project Section  -->
+  <section class="hide h-[100vh]">
+    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
+      <h1 class="text-6xl font-bold my-10">Projects</h1>
+      <div class="mx-10 w-full grid grid-cols-1 md:grid-cols-3 gap-20">
+        {
+          projects.map((project) => (
+            <Card
+              title={project.title}
+              description={project.description}
+              github={project.github}
+              demo={project.demo}
+              image={project.image}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="hide h-[100vh]">
+    <div class="flex items-center justify-center">
+      <h1 class="text-6xl">Hi mom</h1>
+    </div>
+  </section>
 </Layout>
 
-<style>
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
+<style></style>

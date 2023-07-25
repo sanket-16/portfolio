@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         'dark-blue': '#03001C',
         'mint-green': '#03C988',
+        'light-purple': '#301E67',
       },
       fontFamily: {
         Inter: ['Inter'],
@@ -16,6 +17,7 @@ module.exports = {
       },
       backgroundSize: {
         '60%': '60%',
+        '90%': '90%',
       },
     },
   },

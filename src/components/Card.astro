@@ -1,64 +1,42 @@
 ---
 export interface Props {
   title: string;
-  body: string;
-  href: string;
+  description: string;
+  github?: string;
+  demo?: string;
+  image: string;
 }
 
-const { href, title, body } = Astro.props;
+const { github, demo, title, description, image } = Astro.props;
 ---
 
-<li class="link-card">
-  <a href={href}>
-    <h2>
-      {title}
-      <span>&rarr;</span>
-    </h2>
-    <p>
-      {body}
-    </p>
+<div class="bg-light-purple p-10 rounded-xl flex flex-col gap-6">
+  <a href={demo}>
+    <img
+      src={image}
+      alt="project image"
+      class="rounded-md hover:scale-105 transition-all"
+    />
   </a>
-</li>
-<style>
-  .link-card {
-    list-style: none;
-    display: flex;
-    padding: 0.25rem;
-    background-color: white;
-    background-image: none;
-    background-size: 400%;
-    border-radius: 0.6rem;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  }
-
-  .link-card > a {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: 1rem 1.3rem;
-    border-radius: 0.35rem;
-    color: #111;
-    background-color: white;
-    opacity: 0.8;
-  }
-  h2 {
-    margin: 0;
-    font-size: 1.25rem;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  p {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    color: #444;
-  }
-  .link-card:is(:hover, :focus-within) {
-    background-position: 0;
-    background-image: var(--accent-gradient);
-  }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent));
-  }
-</style>
+  <h3 class="font-bold text-xl">{title}</h3>
+  <p class="whitespace-wrap">
+    {description}
+  </p>
+  <div class="flex gap-6">
+    {
+      demo !== undefined && (
+        <a href={demo} class="hover:scale-125 transition-all">
+          <img src="/demo.svg" />
+        </a>
+      )
+    }
+    {
+      github !== undefined && (
+        <a href={github} class="hover:scale-125 transition-all">
+          <img src="/github.svg" />
+        </a>
+      )
+    }
+  </div>
+</div>
+<style></style>
