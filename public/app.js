@@ -10,3 +10,18 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll('.hide');
 hiddenElements.forEach((element) => observer.observe(element));
+
+const skillCards = document.querySelectorAll('.skill-card');
+
+skillCards.forEach((skillCard) => {
+  const text = skillCard.querySelector('.skill-text');
+  skillCard.addEventListener('mouseenter', function () {
+    console.log('enter');
+    text.classList.remove('opacity-0');
+  });
+
+  skillCard.addEventListener('mouseleave', function () {
+    console.log('leave');
+    text.classList.add('opacity-0');
+  });
+});

@@ -1,5 +1,7 @@
 ---
 import Card from '../components/Card.astro';
+import SkillCard from '../components/SkillCard.astro';
+
 import Layout from '../layouts/Layout.astro';
 
 const projects = [
@@ -29,7 +31,7 @@ const projects = [
 const skills = [];
 ---
 
-<script src="/app.js" defer></script>
+<script src="/app.js" defer is:inline></script>
 <Layout title="Sanket's Portfolio">
   <section
     class="hide h-[100vh] bg-[url('/hero.svg')] md:bg-60% bg-90% bg-no-repeat bg-left-bottom"
@@ -46,8 +48,16 @@ const skills = [];
   </section>
   <section class="hide h-[100vh]">
     <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
-      <h1 class="text-6xl font-bold">Skills</h1>
-      <div class="mx-10">Skill</div>
+      <h1 class="text-6xl font-bold my-10">Skills</h1>
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-20">
+        <SkillCard image="hi" skill="'hi" />
+        <SkillCard image="hi" skill="'hi" />
+        <SkillCard image="hi" skill="'hi" />
+        <SkillCard image="hi" skill="'hi" />
+        <SkillCard image="hi" skill="'hi" />
+        <SkillCard image="hi" skill="'hi" />
+        <SkillCard image="hi" skill="'hi" />
+      </div>
     </div>
   </section>
   <!-- Project Section  -->
