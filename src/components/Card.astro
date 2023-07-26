@@ -10,7 +10,9 @@ export interface Props {
 const { github, demo, title, description, image } = Astro.props;
 ---
 
-<div class="bg-light-purple p-10 rounded-xl flex flex-col gap-6">
+<div
+  class="bg-light-purple p-10 rounded-xl flex flex-col gap-6 h-full justify-between"
+>
   <a href={demo}>
     <img
       src={image}

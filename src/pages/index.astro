@@ -9,7 +9,7 @@ const projects = [
     title: 'CryptoCrunch',
     description:
       'A website which shows details about cryptocurrency prices and thier details. ',
-    // github: 'https://github.com/sanket-16/CrunchCap',
+    github: 'https://github.com/sanket-16/CrunchCap',
     demo: 'https://cryptocrunch.vercel.app',
     image: '/cryptocrunch.png',
   },
@@ -21,11 +21,34 @@ const projects = [
     image: '/tweemoji.png',
   },
   {
-    title: 'CryptoCrunch',
-    description: 'hi',
-    github: 'https://github.com/sanket-16/CrunchCap',
-    demo: 'https://cryptocrunch.vercel.app',
-    image: '/cryptocrunch.png',
+    title: 'Flash Cards',
+    description: 'A website where you can create deeply nested flash cards',
+    github: 'https://github.com/sanket-16/flash-cards ',
+    demo: 'https://flashcards-demo.vercel.app',
+    image: '/flashcards.png',
+  },
+  {
+    title: 'Handicapped Equipment E-commerce',
+    description:
+      'A website that sells equipment for handicapped people and carries out various campaigns.',
+    github: 'https://github.com/sanket-16/handicapped-equipment-e-commerce',
+    demo: 'https://handicapped-equipment-e-commerce.vercel.app',
+    image: '/handicapped.png',
+  },
+  {
+    title: 'Brain Tumor Detection',
+    description:
+      'A website that runs a machine learning model and detects brain tumor in MRI images.',
+    github: 'https://github.com/sanket-16/brain-tumor-detection',
+    demo: 'https://brain-tumor-detection-lobg.onrender.com',
+    image: '/brain-tumor.png',
+  },
+  {
+    title: '2048',
+    description: '2048 the game.',
+    github: 'https://github.com/sanket-16/2048',
+    demo: 'https://2048-sanket.vercel.app',
+    image: '/2048.png',
   },
 ];
 const skills = [
@@ -88,8 +111,8 @@ const skills = [
       </p>
     </div>
   </section>
-  <section class="hide min-h-[100vh]" id="skills">
-    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
+  <section class="hide md:min-h-[100vh] xl:min-h-[80vh]" id="skills">
+    <div class="flex flex-col gap-6 my-10 mx-10 md:mx-40">
       <h1 class="text-6xl font-bold my-10">Skills</h1>
       <div class="flex justify-center items-center w-full h-full">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-20">
@@ -110,23 +133,25 @@ const skills = [
   <section class="hide min-h-[100vh]" id="projects">
     <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
       <h1 class="text-6xl font-bold my-10">Projects</h1>
-      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-20">
-        {
-          projects.map((project) => (
-            <Card
-              title={project.title}
-              description={project.description}
-              github={project.github}
-              demo={project.demo}
-              image={project.image}
-            />
-          ))
-        }
+      <div class="w-full flex items-center justify-center 2xl:px-20">
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-20">
+          {
+            projects.map((project) => (
+              <Card
+                title={project.title}
+                description={project.description}
+                github={project.github}
+                demo={project.demo}
+                image={project.image}
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>
   <section class="hide min-h-[80vh]" id="contact">
-    <div class="flex flex-col gap-6 py-10 px-10 md:px-20 min-h-[80vh]">
+    <div class="flex flex-col gap-6 py-10 px-10 md:px-40 min-h-[80vh]">
       <h1 class="text-6xl font-bold">Contact</h1>
       <div class="min-h-[60vh] w-full flex items-center justify-center">
         <div class="grid grid-cols-4 gap-6">
