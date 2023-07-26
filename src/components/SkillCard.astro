@@ -2,17 +2,22 @@
 export interface Props {
   skill: string;
   image: string;
+  hover: string;
 }
-const { skill, image } = Astro.props;
+const { skill, image, hover } = Astro.props;
 ---
 
 <div
-  class="skill-card hover:border-2 rounded-md transition-all p-4 flex flex-col items-center gap-4 h-28"
+  class="skill-card hover:border-2 rounded-md transition-all p-4 flex flex-col items-center gap-4 h-40 w-40 justify-center"
 >
   <div class="icon">
     <!-- Replace the URL with your desired icon image -->
-    <img src="/demo.svg" alt="Icon" />
+    <img src={image} alt="Icon" class="w-12" />
   </div>
-  <div class="opacity-0 skill-text transition-all font-bold">Javascript</div>
+  <div
+    class="opacity-0 skill-text transition-all font-bold text-pre-wrap text-center"
+  >
+    {skill}
+  </div>
+  <style></style>
 </div>
-<style></style>

@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <!-- <script type="module" src="/app.js"></script> -->
     <title>{title}</title>
   </head>
-  <body class="bg-dark-blue text-white overflow-none">
+  <body class="bg-dark-blue text-white overflow-none selection:bg-mint-green">
     <Navbar />
     <slot />
   </body>
@@ -32,6 +32,10 @@ const { title } = Astro.props;
       #da62c4 30%,
       white 60%
     );
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
   }
   body {
     margin: 0;

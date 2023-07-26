@@ -14,11 +14,11 @@ const projects = [
     image: '/cryptocrunch.png',
   },
   {
-    title: 'CryptoCrunch',
-    description: 'hi',
-    github: 'https://github.com/sanket-16/CrunchCap',
-    demo: 'https://cryptocrunch.vercel.app',
-    image: '/cryptocrunch.png',
+    title: 'Tweemoji',
+    description: 'A twitter clone where you can only post emojis.',
+    github: 'https://github.com/sanket-16/tweemoji',
+    demo: 'https://tweemoji-black.vercel.app',
+    image: '/tweemoji.png',
   },
   {
     title: 'CryptoCrunch',
@@ -28,12 +28,54 @@ const projects = [
     image: '/cryptocrunch.png',
   },
 ];
-const skills = [];
+const skills = [
+  {
+    name: 'Typescript',
+    icon: '/typescript.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'Javascript',
+    icon: '/javascript.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'Node JS',
+    icon: '/node.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'Python',
+    icon: '/python.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'SQL / NoSQL',
+    icon: '/database.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'Git / Github',
+    icon: '/git.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'Amazon Web Services',
+    icon: '/amazon.svg',
+    hover: '#3178c6',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: '/tailwind.svg',
+    hover: '#3178c6',
+  },
+];
 ---
 
 <script src="/app.js" defer is:inline></script>
 <Layout title="Sanket's Portfolio">
   <section
+    id="home"
     class="hide h-[100vh] bg-[url('/hero.svg')] md:bg-60% bg-90% bg-no-repeat bg-left-bottom"
   >
     <div class="flex flex-row justify-end items-center pr-20 h-full">
@@ -46,25 +88,29 @@ const skills = [];
       </p>
     </div>
   </section>
-  <section class="hide h-[100vh]">
+  <section class="hide min-h-[100vh]" id="skills">
     <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
       <h1 class="text-6xl font-bold my-10">Skills</h1>
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-20">
-        <SkillCard image="hi" skill="'hi" />
-        <SkillCard image="hi" skill="'hi" />
-        <SkillCard image="hi" skill="'hi" />
-        <SkillCard image="hi" skill="'hi" />
-        <SkillCard image="hi" skill="'hi" />
-        <SkillCard image="hi" skill="'hi" />
-        <SkillCard image="hi" skill="'hi" />
+      <div class="flex justify-center items-center w-full h-full">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-20">
+          {
+            skills.map((skill) => (
+              <SkillCard
+                image={skill.icon}
+                skill={skill.name}
+                hover={skill.hover}
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>
   <!-- Project Section  -->
-  <section class="hide h-[100vh]">
+  <section class="hide min-h-[100vh]" id="projects">
     <div class="flex flex-col gap-6 my-10 mx-10 md:mx-20">
       <h1 class="text-6xl font-bold my-10">Projects</h1>
-      <div class="mx-10 w-full grid grid-cols-1 md:grid-cols-3 gap-20">
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-20">
         {
           projects.map((project) => (
             <Card
@@ -79,7 +125,7 @@ const skills = [];
       </div>
     </div>
   </section>
-  <section class="hide h-[100vh]">
+  <section class="hide min-h-[100vh]" id="contact">
     <div class="flex items-center justify-center">
       <h1 class="text-6xl">Hi mom</h1>
     </div>
