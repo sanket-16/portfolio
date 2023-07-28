@@ -47,7 +47,7 @@ const contactForm = () => {
         <h1 class="text-6xl font-bold">Contact</h1>
         <div class="min-h-[60vh] w-full flex items-center justify-center">
           <form
-            class="grid grid-cols-4 gap-6"
+            class="grid md:grid-cols-4 grid-cols-1 gap-6"
             onSubmit={(event) => sendMail(event)}
           >
             <div class="flex flex-col gap-2">
@@ -62,7 +62,7 @@ const contactForm = () => {
                 class="rounded-md p-4 text-white bg-transparent border-2 focus:outline-none"
               />
             </div>
-            <div class="col-span-3 flex flex-col gap-2">
+            <div class="md:col-span-3 flex flex-col gap-2">
               <label for="email" class="text-white/80">
                 E-mail
               </label>
@@ -74,7 +74,7 @@ const contactForm = () => {
                 class="rounded-md p-4 text-white bg-transparent border-2 focus:outline-none"
               />
             </div>
-            <div class="col-span-4 flex flex-col gap-2">
+            <div class="md:col-span-4 flex flex-col gap-2">
               <label for="subject" class="text-white/80">
                 Subject
               </label>
@@ -86,7 +86,7 @@ const contactForm = () => {
                 class="rounded-md p-4 text-white bg-transparent border-2 focus:outline-none"
               />
             </div>
-            <div class="col-span-4 flex flex-col gap-2">
+            <div class="md:col-span-4 flex flex-col gap-2">
               <label for="message" class="text-white/80">
                 Message
               </label>
@@ -97,7 +97,7 @@ const contactForm = () => {
                 class="rounded-md p-4 text-white bg-transparent border-2 focus:outline-none h-60"
               ></textarea>
             </div>
-            <div class="col-span-4 flex items-center justify-center">
+            <div class="md:col-span-4 flex items-center justify-center">
               <button
                 type="submit"
                 class="py-4 px-8 rounded-md bg-white text-dark-blue font-bold hover:bg-transparent hover:text-white transition-all hover:border-2 hover:border-white hover:scale-105"

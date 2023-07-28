@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "title": "CryptoCrunch",
+      "description": "A website which shows details about cryptocurrency prices and thier details. ",
+      "github": "https://github.com/sanket-16/CrunchCap",
+      "demo": "https://cryptocrunch.vercel.app",
+      "image": "/cryptocrunch.png"
+    },
+    {
+      "title": "Tweemoji",
+      "description": "A twitter clone where you can only post emojis.",
+      "github": "https://github.com/sanket-16/tweemoji",
+      "demo": "https://tweemoji-black.vercel.app",
+      "image": "/tweemoji.png"
+    },
+    {
+      "title": "Flash Cards",
+      "description": "A website where you can create deeply nested flash cards",
+      "github": "https://github.com/sanket-16/flash-cards ",
+      "demo": "https://flashcards-demo.vercel.app",
+      "image": "/flashcards.png"
+    },
+    {
+      "title": "Handicapped Equipment E-commerce",
+      "description": "A website that sells equipment for handicapped people and carries out various campaigns.",
+      "github": "https://github.com/sanket-16/handicapped-equipment-e-commerce",
+      "demo": "https://handicapped-equipment-e-commerce.vercel.app",
+      "image": "/handicapped.png"
+    },
+    {
+      "title": "Brain Tumor Detection",
+      "description": "A website that runs a machine learning model and detects brain tumor in MRI images.",
+      "github": "https://github.com/sanket-16/brain-tumor-detection",
+      "demo": "https://brain-tumor-detection-lobg.onrender.com",
+      "image": "/brain-tumor.png"
+    },
+    {
+      "title": "2048",
+      "description": "2048 the game.",
+      "github": "https://github.com/sanket-16/2048",
+      "demo": "https://2048-sanket.vercel.app",
+      "image": "/2048.png"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Typescript",
+      "icon": "/typescript.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Javascript",
+      "icon": "/javascript.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Node JS",
+      "icon": "/node.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Python",
+      "icon": "/python.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "SQL / NoSQL",
+      "icon": "/database.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Git / Github",
+      "icon": "/git.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Amazon Web Services",
+      "icon": "/amazon.svg",
+      "hover": "#3178c6"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "/tailwind.svg",
+      "hover": "#3178c6"
+    }
+  ]
+}
