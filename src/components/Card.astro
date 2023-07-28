@@ -27,16 +27,36 @@ const { github, demo, title, description, image } = Astro.props;
   <div class="flex gap-6">
     {
       demo !== undefined && (
-        <a href={demo} class="hover:scale-125 transition-all">
-          <img src="/demo.svg" />
-        </a>
+        <div class="relative group">
+          <span
+            class="group-hover:opacity-100 transition-opacity bg-dark-blue p-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-[180%] opacity-0 m-4 mx-auto"
+          >
+            Demo
+          </span>
+          <a href={demo} class="hover:scale-125 transition-all" target="_blank">
+            <img src="/demo.svg" />
+          </a>
+        </div>
       )
     }
     {
       github !== undefined && (
-        <a href={github} class="hover:scale-125 transition-all">
-          <img src="/github.svg" />
-        </a>
+        <div class="group relative">
+          <span
+            class="group-hover:opacity-100 transition-opacity bg-dark-blue p-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-[180%] opacity-0 m-4 mx-auto"
+          >
+            Github
+          </span>
+          <a
+            href={github}
+            class="hover:scale-125 transition-all"
+            target="_blank"
+          >
+            <img src="/github.svg" />
+          </a>
+        </div>
       )
     }
   </div>
