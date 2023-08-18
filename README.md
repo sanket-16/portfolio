@@ -12,7 +12,7 @@ Preview : https://sanket-patil.me
 ## Project Structure
 
 ```
-/
+
 ├── public/
 │
 ├── src/
