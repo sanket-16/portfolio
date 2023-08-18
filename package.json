@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/preact": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/vercel": "^3.8.1",
     "@emailjs/browser": "^3.11.0",
     "@preact/signals": "^1.1.5",
     "@vercel/analytics": "^1.0.2",
