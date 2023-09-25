@@ -1,11 +1,11 @@
-import emailjs from '@emailjs/browser';
-import { signal } from '@preact/signals';
+import emailjs from "@emailjs/browser";
+import { signal } from "@preact/signals";
 
 const contactForm = () => {
-  const name = signal('');
-  const email = signal('');
-  const subject = signal('');
-  const message = signal('');
+  const name = signal("");
+  const email = signal("");
+  const subject = signal("");
+  const message = signal("");
   const initializeEmailJs = () => {
     emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
   };
@@ -28,16 +28,16 @@ const contactForm = () => {
       )
       .then(
         function (response) {
-          alert('Message sent successfully.');
-          console.log('SUCCESS!', response.status, response.text);
-          name.value = '';
-          email.value = '';
-          subject.value = '';
-          message.value = '';
+          alert("Message sent successfully.");
+          console.log("SUCCESS!", response.status, response.text);
+          name.value = "";
+          email.value = "";
+          subject.value = "";
+          message.value = "";
         },
         function (error) {
-          alert('Something went wrong, Please try again later.');
-          console.log('FAILED...', error);
+          alert("Something went wrong, Please try again later.");
+          console.log("FAILED...", error);
         }
       );
   };
@@ -48,7 +48,18 @@ const contactForm = () => {
         <div class="min-h-[60vh] w-full flex items-center justify-center">
           <form
             class="grid md:grid-cols-4 grid-cols-1 gap-6"
-            onSubmit={(event) => sendMail(event)}
+            onSubmit={(event) => {
+              if (
+                name.value === "" ||
+                email.value === "" ||
+                subject.value === "" ||
+                message.value === ""
+              ) {
+                alert("Please fill all the fields properly!");
+              } else {
+                sendMail(event);
+              }
+            }}
           >
             <div class="flex flex-col gap-2">
               <label for="name" class="text-white/80">
